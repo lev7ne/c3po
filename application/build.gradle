@@ -1,0 +1,18 @@
+ext {
+    springbootVersion = "3.3.2"
+}
+
+dependencies {
+    implementation "org.springframework.boot:spring-boot-starter:${springbootVersion}"
+    testImplementation "org.springframework.boot:spring-boot-starter-test:${springbootVersion}"
+}
+
+project(':application') {
+    dependencies {
+        implementation project(':core')
+        implementation project(':service')
+        implementation project(':web')
+        implementation project(':cache')
+    }
+}
+
