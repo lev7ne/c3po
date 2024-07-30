@@ -12,15 +12,14 @@ import java.time.LocalDateTime;
 
 @Entity
 @EntityListeners(AuditingEntityListener.class)
-@Table(name = "client_mo")
+@Table(name = "client")
 @Getter
 @Setter
-public class ClientMo {
+public class Client {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(nullable = false)
     private long id;
-    @Column(name = "org_name")
     private String orgName;
     private long inn;
     private String tenant;
@@ -28,8 +27,8 @@ public class ClientMo {
     private long msisdn;
     private boolean vip;
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "ccc_id", referencedColumnName = "id")
-    private User ccc;
+    @JoinColumn(name = "app_user_id", referencedColumnName = "id")
+    private User appUser;
     @CreatedDate
     private LocalDateTime createdDate;
 }

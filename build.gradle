@@ -1,19 +1,42 @@
 plugins {
-    id 'java'
+    id "io.spring.dependency-management" version "1.1.6"
+    id "idea"
 }
 
-group = 'ru.mf.c3po'
-version = '1.0-SNAPSHOT'
+apply plugin: "io.spring.dependency-management"
 
-repositories {
-    mavenCentral()
-}
+subprojects {
+    apply plugin: "java"
+    apply plugin: "idea"
+    apply plugin: "io.spring.dependency-management"
 
-dependencies {
-    testImplementation platform('org.junit:junit-bom:5.10.0')
-    testImplementation 'org.junit.jupiter:junit-jupiter'
-}
+    group = "ru.mf"
+    version = "v0.1"
 
-test {
-    useJUnitPlatform()
+    repositories {
+        mavenCentral()
+    }
+
+    ext {
+        springbootVersion = "3.3.2"
+        lombokVersion = "1.18.34"
+        mapstructVersion = "1.5.5.Final"
+        lombokMapstructBindingVersion = "0.2.0"
+        postgresqlDriver = "42.7.3"
+        vaadinVersion = "24.4.7"
+        jakartaVersion = "3.1.0"
+    }
+
+    dependencyManagement {
+        dependencies {
+            dependency "org.springframework.boot:spring-boot-starter:${springbootVersion}"
+            dependency "org.springframework.boot:spring-boot-starter-test:${springbootVersion}"
+        }
+    }
+
+    tasks.withType(JavaCompile).tap {
+        configureEach {
+            options.encoding = "UTF-8"
+        }
+    }
 }

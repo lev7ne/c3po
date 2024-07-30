@@ -1,4 +1,4 @@
-package ru.mf.controller;
+package ru.mf.user.controller;
 
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;

@@ -1,18 +1,17 @@
-ext {
-    springbootVersion = "3.3.2"
-}
-
 dependencies {
-    implementation "org.springframework.boot:spring-boot-starter:${springbootVersion}"
-    testImplementation "org.springframework.boot:spring-boot-starter-test:${springbootVersion}"
+    implementation "org.springframework.boot:spring-boot-starter"
+    implementation "org.springframework.boot:spring-boot-starter-web:${springbootVersion}"
 }
 
 project(':application') {
     dependencies {
         implementation project(':core')
-        implementation project(':service')
-        implementation project(':web')
-        implementation project(':cache')
+        implementation project(':dto')
+        implementation project(':mapper')
+        implementation project(':web-view')
+        implementation project(':web-api')
+        implementation project(':main-service')
     }
 }
+
 

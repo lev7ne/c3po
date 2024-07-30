@@ -1,32 +1,14 @@
-plugins {
-    id 'io.spring.dependency-management' version '1.1.0'
-}
-
-ext {
-    springbootVersion = "3.3.2"
-    lombokVersion = "1.18.34"
-    junitVersion = "5.10.3"
-    vaadinVersion = "24.4.7"
-}
-
 dependencies {
-    implementation project(':service')
-    implementation project(':dto')
-    implementation project(':core')
+    implementation project(":dto")
+    implementation project(":main-service")
 
-    implementation "org.springframework.boot:spring-boot-starter:${springbootVersion}"
+    implementation "org.springframework.boot:spring-boot-starter"
     implementation "org.springframework.boot:spring-boot-starter-web:${springbootVersion}"
-    implementation "org.springframework.boot:spring-boot-starter-data-jpa:${springbootVersion}"
+    testImplementation "org.springframework.boot:spring-boot-starter-test"
+
+    implementation "jakarta.validation:jakarta.validation-api:${jakartaVersion}"
+
     implementation "org.projectlombok:lombok:${lombokVersion}"
-    implementation "com.vaadin:vaadin-spring-boot-starter:${vaadinVersion}"
     annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
-
-    testImplementation "org.junit.jupiter:junit-jupiter:${junitVersion}"
-}
-
-dependencyManagement {
-    imports {
-        mavenBom "com.vaadin:vaadin-bom:${vaadinVersion}"
-    }
 }
 

@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 @ToString
-public class ClientMoDto {
+public class ClientDto {
     private long id;
     private String orgName;
     private long inn;
@@ -19,6 +19,6 @@ public class ClientMoDto {
     private int personalAccount;
     private long msisdn;
     private boolean vip;
-    private UserDto ccc;
+    private UserDto appUser;
     private LocalDateTime createdDate;
 }

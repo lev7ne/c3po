@@ -4,8 +4,6 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.UUID;
-
 
 @Entity
 @Table(name = "app_user")
@@ -13,8 +11,10 @@ import java.util.UUID;
 @Setter
 public class User {
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(nullable = false)
-    private UUID id;
+    private long id;
     private String firstName;
+    private String lastName;
+    private String email;
 }

@@ -10,39 +10,44 @@ import com.vaadin.flow.data.value.ValueChangeMode;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import org.springframework.beans.factory.annotation.Autowired;
-
-import ru.mf.user.UserDto;
+import ru.mf.client.ClientDto;
+import ru.mf.client.service.ClientService;
 import ru.mf.user.service.UserService;
 
-import java.util.Collections;
 
-
-
-@PageTitle("C3po | Users")
-@Route("/admin/users")
-public class UserView extends VerticalLayout {
+@PageTitle("C3po | Clients")
+@Route("/clients")
+public class ClientView extends VerticalLayout {
+    private final ClientService clientService;
     private final UserService userService;
 
-    Grid<UserDto> grid = new Grid<>(UserDto.class);
+    Grid<ClientDto> grid = new Grid<>(ClientDto.class);
     TextField filterText = new TextField();
     ClientForm clientForm;
 
-
     @Autowired
-    public UserView(UserService userService) {
+    public ClientView(ClientService clientService, UserService userService) {
+        this.userService = userService;
+        this.clientService = clientService;
+
         addClassName("list-view");
         setSizeFull();
 
         configureGrid();
         configureForm();
 
-        this.userService = userService;
-        grid.setItems(userService.findAllUsers());
+        grid.setItems(clientService.findAllClients());
 
         add(
                 getToolbar(),
                 getContent()
         );
+
+        updateList();
+    }
+
+    private void updateList() {
+        grid.setItems(clientService.findAllClients(filterText.getValue()));
     }
 
     private Component getContent() {
@@ -56,16 +61,17 @@ public class UserView extends VerticalLayout {
     }
 
     private void configureForm() {
-        clientForm = new ClientForm(Collections.emptyList());
+        clientForm = new ClientForm(userService.findAllUsers());
         clientForm.setWidth("25em");
     }
 
     private Component getToolbar() {
-        filterText.setPlaceholder("Filter by name...");
+        filterText.setPlaceholder("Filter by...");
         filterText.setClearButtonVisible(true);
         filterText.setValueChangeMode(ValueChangeMode.LAZY);
+        filterText.addValueChangeListener(e -> updateList());
 
-        Button addContactButton = new Button("Add user");
+        Button addContactButton = new Button("Add client");
 
         HorizontalLayout toolbar = new HorizontalLayout(filterText, addContactButton);
         toolbar.addClassName("toolbar");
@@ -73,9 +79,9 @@ public class UserView extends VerticalLayout {
     }
 
     private void configureGrid() {
-        grid.addClassName("user-grid");
+        grid.addClassName("clients-grid");
         grid.setSizeFull();
-        grid.setColumns("id", "firstName", "lastName", "email");
+        grid.setColumns("id", "orgName", "inn", "tenant", "personalAccount", "msisdn", "vip", "appUser", "createdDate");
         grid.getColumns().forEach(c -> c.setAutoWidth(true));
     }
 

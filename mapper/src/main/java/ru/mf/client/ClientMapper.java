@@ -1,24 +1,24 @@
 package ru.mf.client;
 
-import org.mapstruct.*;
-import ru.mf.client.model.ClientMo;
+import org.mapstruct.Mapper;
+import org.mapstruct.MappingConstants;
+import org.mapstruct.NullValuePropertyMappingStrategy;
+import org.mapstruct.ReportingPolicy;
+import ru.mf.client.model.Client;
 
 import java.util.List;
 
 
 @Mapper(
-//        uses = UserMapper.class,
         nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE,
         componentModel = MappingConstants.ComponentModel.SPRING,
         unmappedTargetPolicy = ReportingPolicy.IGNORE
 )
-public interface ClientMoMapper {
+public interface ClientMapper {
+    Client toEntity(ClientCreateDto dto);
 
-    ClientMo toEntity(ClientMoCreateDto dto);
+    ClientDto toDto(Client entity);
 
-//    @Mapping(target = "ccc", source = "ccc.lastName")
-    ClientMoDto toDto(ClientMo clientMo);
-
-    List<ClientMoDto> toDtos(List<ClientMo> ClientsMo);
+    List<ClientDto> toDtos(List<Client> entities);
 }
 

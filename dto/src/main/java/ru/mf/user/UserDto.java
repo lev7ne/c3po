@@ -1,16 +1,16 @@
-package ru.mf.user.dto;
+package ru.mf.user;
 
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
-
-import java.util.UUID;
 
 
 @Getter
 @Setter
 @ToString
 public class UserDto {
-    private UUID id;
+    private long id;
     private String firstName;
+    private String lastName;
+    private String email;
 }

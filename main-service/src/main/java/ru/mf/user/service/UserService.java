@@ -1,15 +1,23 @@
 package ru.mf.user.service;
 
 import ru.mf.user.UserCreateDto;
+import ru.mf.user.UserDeleteDto;
 import ru.mf.user.UserDto;
 
 import java.util.List;
 
 
 public interface UserService {
-    UserDto create(UserCreateDto createDto);
+    UserDto getUserById(long id);
 
-    UserDto getByFirstName(String firstName);
+    UserDto saveUser(UserCreateDto createDto);
 
-    List<UserDto> findAll();
+    List<UserDto> findAllUsers();
+
+    List<UserDto> findAllUsers(String filterText);
+
+    long countUser();
+
+    void deleteUser(UserDeleteDto dto);
+
 }

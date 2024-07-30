@@ -1,16 +1,23 @@
-package ru.mf.user.mapper;
+package ru.mf.user;
 
-import org.mapstruct.*;
-import ru.mf.user.dto.UserDto;
-import ru.mf.user.dto.UserCreateDto;
+import org.mapstruct.Mapper;
+import org.mapstruct.MappingConstants;
+import org.mapstruct.NullValuePropertyMappingStrategy;
+import org.mapstruct.ReportingPolicy;
 import ru.mf.user.model.User;
+
+import java.util.List;
 
 
 @Mapper(
-        componentModel = MappingConstants.ComponentModel.SPRING
+        nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE,
+        componentModel = MappingConstants.ComponentModel.SPRING,
+        unmappedTargetPolicy = ReportingPolicy.IGNORE
 )
-public abstract class UserMapper {
-    public abstract User toEntity(UserCreateDto dto);
+public interface UserMapper {
+    User toEntity(UserCreateDto dto);
 
-    public abstract UserDto toDto(User user);
+    UserDto toDto(User entity);
+
+    List<UserDto> toDtos(List<User> entities);
 }

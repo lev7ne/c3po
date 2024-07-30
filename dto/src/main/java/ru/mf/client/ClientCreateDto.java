@@ -12,7 +12,7 @@ import ru.mf.annotation.StartsWith7;
 @Getter
 @Setter
 @ToString
-public class ClientMoCreateDto {
+public class ClientCreateDto {
     @NotBlank
     @Size(min = 2, max = 250)
     private String orgName;
@@ -25,5 +25,5 @@ public class ClientMoCreateDto {
     @StartsWith62
     private Long msisdn;
     private boolean vip;
-    private long userId;
+    private long appUserId;
 }
