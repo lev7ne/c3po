@@ -5,6 +5,6 @@ import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import ru.mf.client.model.Client;
 
 
-public interface ClientMoRepository extends JpaRepository<Client, Long>,
+public interface ClientRepository extends JpaRepository<Client, Long>,
         JpaSpecificationExecutor<Client> {
 }

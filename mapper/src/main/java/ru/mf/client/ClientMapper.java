@@ -1,9 +1,6 @@
 package ru.mf.client;
 
-import org.mapstruct.Mapper;
-import org.mapstruct.MappingConstants;
-import org.mapstruct.NullValuePropertyMappingStrategy;
-import org.mapstruct.ReportingPolicy;
+import org.mapstruct.*;
 import ru.mf.client.model.Client;
 
 import java.util.List;
@@ -15,10 +12,23 @@ import java.util.List;
         unmappedTargetPolicy = ReportingPolicy.IGNORE
 )
 public interface ClientMapper {
-    Client toEntity(ClientCreateDto dto);
+
+    Client toNewEntity(ClientCreateDto dto);
 
     ClientDto toDto(Client entity);
 
     List<ClientDto> toDtos(List<Client> entities);
+
+    void update(ClientUpdateDto dto, @MappingTarget Client entity);
+
+
+    Client toEntity(ClientViewDto dto);
+
+    ClientViewDto toViewDto(Client entity);
+
+    List<ClientViewDto> toViewDtos(List<Client> entities);
+
+    void update(ClientViewDto dto, @MappingTarget Client entity);
+
 }
 

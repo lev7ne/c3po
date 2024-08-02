@@ -10,13 +10,11 @@ import ru.mf.annotation.StartsWith62;
 import ru.mf.annotation.StartsWith7;
 import ru.mf.user.UserDto;
 
-import java.time.LocalDateTime;
-
 
 @Getter
 @Setter
 @ToString
-public class ClientDto {
+public class ClientUpdateDto {
     private Long id;
     @NotEmpty
     @Size(min = 2, max = 250)
@@ -31,5 +29,4 @@ public class ClientDto {
     @StartsWith62
     private Long msisdn;
     private UserDto appUser;
-    private LocalDateTime createdDate;
 }

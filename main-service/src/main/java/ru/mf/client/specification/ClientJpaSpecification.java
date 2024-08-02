@@ -16,7 +16,7 @@ import java.util.Objects;
 public class ClientJpaSpecification {
     public Specification<Client> searchSpec(String filterText) {
         return searchOr(filterText, Arrays.asList("orgName", "inn", "tenant",
-                "personalAccount", "msisdn", "vip"));
+                "personalAccount", "msisdn"));
     }
 
     private static Specification<Client> searchOr(String filterText, List<String> fields) {

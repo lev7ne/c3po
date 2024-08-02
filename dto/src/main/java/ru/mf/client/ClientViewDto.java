@@ -16,7 +16,7 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 @ToString
-public class ClientDto {
+public class ClientViewDto {
     private Long id;
     @NotEmpty
     @Size(min = 2, max = 250)

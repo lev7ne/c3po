@@ -4,8 +4,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import ru.mf.exception.NotFoundException;
-import ru.mf.user.UserCreateDto;
-import ru.mf.user.UserDeleteDto;
 import ru.mf.user.UserDto;
 import ru.mf.user.UserMapper;
 import ru.mf.user.repository.UserRepository;
@@ -32,7 +30,7 @@ public class UserServiceImpl implements UserService {
 
     @Transactional
     @Override
-    public UserDto saveUser(UserCreateDto dto) {
+    public UserDto saveUser(UserDto dto) {
         var user = userRepository.save(userMapper.toEntity(dto));
         return userMapper.toDto(user);
     }
@@ -64,7 +62,7 @@ public class UserServiceImpl implements UserService {
 
     @Transactional
     @Override
-    public void deleteUser(UserDeleteDto dto) {
+    public void deleteUser(UserDto dto) {
         var spec = userJpaSpecification.deleteUserSpec(dto);
         userRepository.delete(spec);
     }

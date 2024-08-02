@@ -1,29 +1,31 @@
 package ru.mf.client;
 
-import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Digits;
+import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Size;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 import ru.mf.annotation.StartsWith62;
 import ru.mf.annotation.StartsWith7;
+import ru.mf.user.UserDto;
 
 
 @Getter
 @Setter
 @ToString
 public class ClientCreateDto {
-    @NotBlank
+    @NotEmpty
     @Size(min = 2, max = 250)
     private String orgName;
-    private long inn;
-    @NotBlank
+    @Digits(integer = 12, fraction = 0)
+    private Long inn;
+    @NotEmpty
     @Size(min = 2, max = 250)
     private String tenant;
     @StartsWith7
     private Long personalAccount;
     @StartsWith62
     private Long msisdn;
-    private boolean vip;
-    private long appUserId;
+    private UserDto appUser;
 }

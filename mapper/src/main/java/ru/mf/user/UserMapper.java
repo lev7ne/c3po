@@ -15,7 +15,7 @@ import java.util.List;
         unmappedTargetPolicy = ReportingPolicy.IGNORE
 )
 public interface UserMapper {
-    User toEntity(UserCreateDto dto);
+    User toEntity(UserDto dto);
 
     UserDto toDto(User entity);
 

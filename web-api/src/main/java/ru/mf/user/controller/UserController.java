@@ -6,7 +6,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import ru.mf.user.UserCreateDto;
 import ru.mf.user.UserDto;
 import ru.mf.user.service.UserService;
 
@@ -21,10 +20,10 @@ public class UserController {
     private final UserService userService;
 
     @PostMapping("")
-    public ResponseEntity<UserDto> createUser(@Valid @RequestBody UserCreateDto userCreateDto) {
-        log.info("Creating user: {}", userCreateDto);
+    public ResponseEntity<UserDto> createUser(@Valid @RequestBody UserDto createDto) {
+        log.info("Creating user: {}", createDto);
 
-        var userDto = userService.saveUser(userCreateDto);
+        var userDto = userService.saveUser(createDto);
 
         log.info("Created user: {}", userDto);
 
@@ -36,11 +35,11 @@ public class UserController {
     public ResponseEntity<List<UserDto>> findAllUsers() {
         log.info("Getting all users");
 
-        var userDtos = userService.findAllUsers();
+        var dtos = userService.findAllUsers();
 
-        log.info("Found {} users", userDtos.size());
+        log.info("Found {} users", dtos.size());
 
         return ResponseEntity.status(HttpStatus.OK)
-                .body(userDtos);
+                .body(dtos);
     }
 }

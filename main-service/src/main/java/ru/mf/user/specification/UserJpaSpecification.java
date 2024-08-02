@@ -2,7 +2,7 @@ package ru.mf.user.specification;
 
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Component;
-import ru.mf.user.UserDeleteDto;
+import ru.mf.user.UserDto;
 import ru.mf.user.model.User;
 
 import java.util.Arrays;
@@ -28,7 +28,7 @@ public class UserJpaSpecification {
         };
     }
 
-    public Specification<User> deleteUserSpec(UserDeleteDto dto) {
+    public Specification<User> deleteUserSpec(UserDto dto) {
         return buildSpecification(dto.getFirstName(), dto.getLastName(), dto.getEmail());
     }
 
