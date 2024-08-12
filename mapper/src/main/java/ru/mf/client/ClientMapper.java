@@ -21,7 +21,6 @@ public interface ClientMapper {
 
     void update(ClientUpdateDto dto, @MappingTarget Client entity);
 
-
     Client toEntity(ClientViewDto dto);
 
     ClientViewDto toViewDto(Client entity);

@@ -4,30 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eba9b435-e5ba-4645-9919-acbdf4d49f3d" name="Changes" comment="update structure">
-      <change afterPath="$PROJECT_DIR$/application/src/main/java/ru/mf/configuration/JacksonConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web-view/frontend/c3poapplication/styles.css" afterDir="false" />
+    <list default="true" id="eba9b435-e5ba-4645-9919-acbdf4d49f3d" name="Changes" comment="-min mvp version">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/src/main/java/ru/mf/client/model/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/ru/mf/client/model/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/ru/mf/client/repository/ClientMoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/ru/mf/client/repository/ClientRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/src/main/resources/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/resources/schema.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dto/src/main/java/ru/mf/client/ClientCreateDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dto/src/main/java/ru/mf/client/ClientDeleteDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dto/src/main/java/ru/mf/client/ClientDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/dto/src/main/java/ru/mf/client/ClientDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dto/src/main/java/ru/mf/user/UserCreateDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dto/src/main/java/ru/mf/user/UserDeleteDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dto/src/main/java/ru/mf/user/UserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/dto/src/main/java/ru/mf/user/UserDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main-service/src/main/java/ru/mf/client/service/ClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/main-service/src/main/java/ru/mf/client/service/ClientService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main-service/src/main/java/ru/mf/client/service/impl/ClientServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/main-service/src/main/java/ru/mf/client/service/impl/ClientServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main-service/src/main/java/ru/mf/client/specification/ClientJpaSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/main-service/src/main/java/ru/mf/client/specification/ClientJpaSpecification.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main-service/src/main/java/ru/mf/user/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/main-service/src/main/java/ru/mf/user/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main-service/src/main/java/ru/mf/user/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/main-service/src/main/java/ru/mf/user/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main-service/src/main/java/ru/mf/user/specification/UserJpaSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/main-service/src/main/java/ru/mf/user/specification/UserJpaSpecification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main-service/src/main/java/ru/mf/client/service/ClientViewService.java" beforeDir="false" afterPath="$PROJECT_DIR$/main-service/src/main/java/ru/mf/client/service/ClientViewService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main-service/src/main/java/ru/mf/client/service/impl/ClientViewViewServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/main-service/src/main/java/ru/mf/client/service/impl/ClientViewServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mapper/src/main/java/ru/mf/client/ClientMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/mapper/src/main/java/ru/mf/client/ClientMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mapper/src/main/java/ru/mf/user/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/mapper/src/main/java/ru/mf/user/UserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-api/src/main/java/ru/mf/user/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-api/src/main/java/ru/mf/user/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-view/src/main/java/ru/mf/view/ClientForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-view/src/main/java/ru/mf/view/ClientForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-view/src/main/java/ru/mf/view/ClientView.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-view/src/main/java/ru/mf/view/ClientView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-view/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/web-view/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-view/src/main/java/ru/mf/view/ClientForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-view/src/main/java/ru/mf/view/CompanyForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-view/src/main/java/ru/mf/view/ClientView.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-view/src/main/java/ru/mf/view/CompanyView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +43,12 @@
         </task>
         <projects_view>
           <tree_state>
-            <expand />
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="c3po" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
             <select />
           </tree_state>
         </projects_view>
@@ -150,6 +141,9 @@
     ]
   }
 }</component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\528\Desktop\homework\c3po\application" />
@@ -157,6 +151,7 @@
       <recent name="C:\Users\528\Desktop\homework\c3po\server" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ru.mf.view" />
       <recent name="ru.mf" />
     </key>
   </component>
@@ -332,7 +327,13 @@
       <workItem from="1722359866679" duration="10675000" />
       <workItem from="1722372049360" duration="332000" />
       <workItem from="1722373868616" duration="299000" />
-      <workItem from="1722444902193" duration="12148000" />
+      <workItem from="1722444902193" duration="29922000" />
+      <workItem from="1722626708622" duration="533000" />
+      <workItem from="1722700488627" duration="614000" />
+      <workItem from="1723054113947" duration="617000" />
+      <workItem from="1723285144007" duration="6436000" />
+      <workItem from="1723291640932" duration="16254000" />
+      <workItem from="1723494836818" duration="3200000" />
     </task>
     <task id="LOCAL-00001" summary="update structure">
       <option name="closed" value="true" />
@@ -342,15 +343,35 @@
       <option name="project" value="LOCAL" />
       <updated>1722360051476</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="-min mvp version">
+      <option name="closed" value="true" />
+      <created>1722620853913</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1722620853913</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="update structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="update structure" />
+    <MESSAGE value="-min mvp version" />
+    <option name="LAST_COMMIT_MESSAGE" value="-min mvp version" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

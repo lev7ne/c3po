@@ -16,7 +16,7 @@ CREATE TABLE client
     personal_account BIGINT                                  NOT NULL,
     msisdn           BIGINT                                  NOT NULL,
     app_user_id      BIGINT                                  NOT NULL,
-    created_date     DATE DEFAULT CURRENT_DATE               NOT NULL,
+    created_date     DATE                                    NOT NULL,
     CONSTRAINT fk_app_user_id FOREIGN KEY (app_user_id) REFERENCES app_user (id),
     CONSTRAINT uq_service UNIQUE (tenant, msisdn)
 );
@@ -32,26 +32,26 @@ VALUES ('Luke', 'Skywalker', 'luke.skywalker@starwars.com'),
 
 -- Вставка данных в таблицу client
 INSERT INTO client (org_name, inn, tenant, personal_account, msisdn, app_user_id, created_date)
-VALUES ('Rebel Alliance', 1234567890, 'tenant1', 700000001, 6234567890, 1, '2024-07-31 00:00:00'),
-       ('Galactic Empire', 2345678901, 'tenant2', 700000002, 6245678901, 2, '2024-07-31 00:00:00'),
-       ('Jedi Order', 3456789012, 'tenant3', 700000003, 6256789012, 3, '2024-07-31 00:00:00'),
-       ('Sith Order', 4567890123, 'tenant4', 700000004, 6267890123, 4, '2024-07-31 00:00:00'),
-       ('Resistance', 5678901234, 'tenant5', 700000005, 6278901234, 5, '2024-07-31 00:00:00'),
-       ('First Order', 6789012345, 'tenant6', 700000006, 6289012345, 1, '2024-07-31 00:00:00'),
-       ('Trade Federation', 7890123456, 'tenant7', 700000007, 6290123456, 2, '2024-07-31 00:00:00'),
-       ('Separatists', 8901234567, 'tenant8', 700000008, 6201234567, 3, '2024-07-31 00:00:00'),
-       ('Mandalorian Clan', 9012345678, 'tenant9', 700000009, 6212345678, 4, '2024-07-31 00:00:00'),
-       ('Bounty Hunters Guild', 1234567891, 'tenant10', 700000010, 6234567891, 5, '2024-07-31 00:00:00'),
-       ('New Republic', 2345678902, 'tenant11', 700000011, 6245678902, 1, '2024-07-31 00:00:00'),
-       ('Galactic Senate', 3456789013, 'tenant12', 700000012, 6256789013, 2, '2024-07-31 00:00:00'),
-       ('Imperial Remnant', 4567890124, 'tenant13', 700000013, 6267890124, 3, '2024-07-31 00:00:00'),
-       ('Sith Eternal', 5678901235, 'tenant14', 700000014, 6278901235, 4, '2024-07-31 00:00:00'),
-       ('Jedi Council', 6789012346, 'tenant15', 700000015, 6289012346, 5, '2024-07-31 00:00:00'),
-       ('Knights of Ren', 7890123457, 'tenant16', 700000016, 6290123457, 1, '2024-07-31 00:00:00'),
-       ('Clone Army', 8901234568, 'tenant17', 700000017, 6201234568, 2, '2024-07-31 00:00:00'),
-       ('Droid Army', 9012345679, 'tenant18', 700000018, 6212345679, 3, '2024-07-31 00:00:00'),
-       ('Hutt Cartel', 1234567892, 'tenant19', 700000019, 6234567892, 4, '2024-07-31 00:00:00'),
-       ('Wookiee Tribe', 2345678903, 'tenant20', 700000020, 6245678903, 5, '2024-07-31 00:00:00');
+VALUES ('Rebel Alliance', 1234567890, 'tenant1', 700000001, 6234567890, 1, '2024-07-31'),
+       ('Galactic Empire', 2345678901, 'tenant2', 700000002, 6245678901, 2, '2024-07-31'),
+       ('Jedi Order', 3456789012, 'tenant3', 700000003, 6256789012, 3, '2024-07-31'),
+       ('Sith Order', 4567890123, 'tenant4', 700000004, 6267890123, 4, '2024-07-31'),
+       ('Resistance', 5678901234, 'tenant5', 700000005, 6278901234, 5, '2024-07-31'),
+       ('First Order', 6789012345, 'tenant6', 700000006, 6289012345, 1, '2024-07-31'),
+       ('Trade Federation', 7890123456, 'tenant7', 700000007, 6290123456, 2, '2024-07-31'),
+       ('Separatists', 8901234567, 'tenant8', 700000008, 6201234567, 3, '2024-07-31'),
+       ('Mandalorian Clan', 9012345678, 'tenant9', 700000009, 6212345678, 4, '2024-07-31'),
+       ('Bounty Hunters Guild', 1234567891, 'tenant10', 700000010, 6234567891, 5, '2024-07-31'),
+       ('New Republic', 2345678902, 'tenant11', 700000011, 6245678902, 1, '2024-07-31'),
+       ('Galactic Senate', 3456789013, 'tenant12', 700000012, 6256789013, 2, '2024-07-31'),
+       ('Imperial Remnant', 4567890124, 'tenant13', 700000013, 6267890124, 3, '2024-07-31'),
+       ('Sith Eternal', 5678901235, 'tenant14', 700000014, 6278901235, 4, '2024-07-31'),
+       ('Jedi Council', 6789012346, 'tenant15', 700000015, 6289012346, 5, '2024-07-31'),
+       ('Knights of Ren', 7890123457, 'tenant16', 700000016, 6290123457, 1, '2024-07-31'),
+       ('Clone Army', 8901234568, 'tenant17', 700000017, 6201234568, 2, '2024-07-31'),
+       ('Droid Army', 9012345679, 'tenant18', 700000018, 6212345679, 3, '2024-07-31'),
+       ('Hutt Cartel', 1234567892, 'tenant19', 700000019, 6234567892, 4, '2024-07-31'),
+       ('Wookiee Tribe', 2345678903, 'tenant20', 700000020, 6245678903, 5, '2024-07-31');
 
 -- Изменение SEQUENCE на client_seq
 -- ALTER SEQUENCE client_id_seq RENAME TO client_seq;

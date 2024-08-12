@@ -1,5 +1,6 @@
 dependencies {
     implementation project(":main-service")
+    implementation project(":mapper")
     implementation project(":dto")
 
     implementation "com.vaadin:vaadin-spring-boot-starter:${vaadinVersion}"

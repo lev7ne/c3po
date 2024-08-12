@@ -1,18 +1,20 @@
 package ru.mf.client.service;
 
+import ru.mf.client.ClientViewDto;
+
 import java.util.List;
 
 
-public interface ClientViewService<T> {
-    T saveClient(T dto);
+public interface ClientViewService {
 
-    T updateClient(T dto);
 
-    void deleteClient(T dto);
+    void saveClient(ClientViewDto dto);
 
-    T getClientById(Long id);
+    void deleteClient(ClientViewDto dto);
 
-    List<T> findAllClients();
+    ClientViewDto getClientById(Long id);
 
-    List<T> findAllClients(String filterText);
+    List<ClientViewDto> findAllClients();
+
+    List<ClientViewDto> findAllClients(String filterText);
 }

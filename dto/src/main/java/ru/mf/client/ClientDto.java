@@ -10,7 +10,7 @@ import ru.mf.annotation.StartsWith62;
 import ru.mf.annotation.StartsWith7;
 import ru.mf.user.UserDto;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 
 @Getter
@@ -31,5 +31,5 @@ public class ClientDto {
     @StartsWith62
     private Long msisdn;
     private UserDto appUser;
-    private LocalDateTime createdDate;
+    private LocalDate createdDate;
 }
