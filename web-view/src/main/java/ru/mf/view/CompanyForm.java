@@ -14,19 +14,16 @@ import com.vaadin.flow.data.binder.BeanValidationBinder;
 import com.vaadin.flow.data.binder.Binder;
 import com.vaadin.flow.data.binder.ValidationException;
 import com.vaadin.flow.shared.Registration;
-import ru.mf.client.ClientViewDto;
+import ru.mf.company.CompanyViewDto;
 import ru.mf.user.UserDto;
 
 import java.util.List;
 
 
 public class CompanyForm extends FormLayout {
-    private Binder<ClientViewDto> binder;
+    private Binder<CompanyViewDto> binder;
     private TextField orgName = new TextField("Название");
     private TextField inn = new TextField("ИНН");
-    private TextField tenant = new TextField("Тенант");
-    private TextField personalAccount = new TextField("Лицевой счет");
-    private TextField msisdn = new TextField("MSISDN");
     private ComboBox<UserDto> appUsers = new ComboBox<>("Менеджер CCC");
 
     private Button save = new Button("Сохранить");
@@ -36,18 +33,18 @@ public class CompanyForm extends FormLayout {
     public CompanyForm(List<UserDto> userDtos) {
         addClassName("company-form");
 
-        binder = new BeanValidationBinder<>(ClientViewDto.class);
+        binder = new BeanValidationBinder<>(CompanyViewDto.class);
         binder.bindInstanceFields(this);
 
         appUsers.setItems(userDtos);
         appUsers.setItemLabelGenerator(UserDto::getLastName);
 
-        binder.forField(appUsers).bind(ClientViewDto::getAppUser, ClientViewDto::setAppUser);
+        binder.forField(appUsers).bind(CompanyViewDto::getAppUser, CompanyViewDto::setAppUser);
 
-        add(orgName, inn, tenant, personalAccount, msisdn, appUsers, createButtonLayout());
+        add(orgName, inn, appUsers, createButtonLayout());
     }
 
-    public void setClient(ClientViewDto dto) {
+    public void setCompany(CompanyViewDto dto) {
         binder.readBean(dto);
     }
 
@@ -68,35 +65,36 @@ public class CompanyForm extends FormLayout {
 
     private void validateAndSave() {
         try {
-            binder.writeBean(binder.getBean());
-            fireEvent(new SaveEvent(this, binder.getBean()));
+            var bean = binder.getBean();
+            binder.writeBean(bean);
+            fireEvent(new SaveEvent(this, bean));
         } catch (ValidationException e) {
             e.printStackTrace();
         }
     }
 
     public static class SaveEvent extends ComponentEvent<CompanyForm> {
-        private final ClientViewDto dto;
+        private CompanyViewDto dto;
 
-        SaveEvent(CompanyForm source, ClientViewDto dto) {
+        SaveEvent(CompanyForm source, CompanyViewDto dto) {
             super(source, false);
             this.dto = dto;
         }
 
-        public ClientViewDto getClient() {
+        public CompanyViewDto getCompany() {
             return dto;
         }
     }
 
     public static class DeleteEvent extends ComponentEvent<CompanyForm> {
-        private final ClientViewDto dto;
+        private final CompanyViewDto dto;
 
-        DeleteEvent(CompanyForm source, ClientViewDto dto) {
+        DeleteEvent(CompanyForm source, CompanyViewDto dto) {
             super(source, false);
             this.dto = dto;
         }
 
-        public ClientViewDto getClient() {
+        public CompanyViewDto getCompany() {
             return dto;
         }
     }
