@@ -5,15 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eba9b435-e5ba-4645-9919-acbdf4d49f3d" name="Changes" comment="-min mvp version">
+      <change afterPath="$PROJECT_DIR$/dto/src/main/java/ru/mf/company/CompanyCreateDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dto/src/main/java/ru/mf/company/CompanyUpdateDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mapper/src/main/java/ru/mf/company/CompanyMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d216e5d9-4637-45a3-9571-428b9adb847c.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d216e5d9-4637-45a3-9571-428b9adb847c.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d216e5d9-4637-45a3-9571-428b9adb847c/storage_v2/_src_/database/c3po.L84tAA/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d216e5d9-4637-45a3-9571-428b9adb847c/storage_v2/_src_/database/c3po.L84tAA/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/ru/mf/client/model/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/ru/mf/client/model/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/ru/mf/client/model/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/ru/mf/company/model/Company.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/ru/mf/client/repository/ClientRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/ru/mf/company/repository/CompanyRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/src/main/resources/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/resources/schema.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main-service/src/main/java/ru/mf/client/service/ClientViewService.java" beforeDir="false" afterPath="$PROJECT_DIR$/main-service/src/main/java/ru/mf/client/service/ClientViewService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main-service/src/main/java/ru/mf/client/service/impl/ClientViewViewServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/main-service/src/main/java/ru/mf/client/service/impl/ClientViewServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mapper/src/main/java/ru/mf/client/ClientMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/mapper/src/main/java/ru/mf/client/ClientMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dto/src/main/java/ru/mf/client/ClientCreateDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/dto/src/main/java/ru/mf/company/BaseCompanyDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dto/src/main/java/ru/mf/client/ClientDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/dto/src/main/java/ru/mf/company/CompanyDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dto/src/main/java/ru/mf/client/ClientUpdateDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dto/src/main/java/ru/mf/client/ClientViewDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/dto/src/main/java/ru/mf/company/CompanyViewDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main-service/src/main/java/ru/mf/client/service/ClientViewService.java" beforeDir="false" afterPath="$PROJECT_DIR$/main-service/src/main/java/ru/mf/company/service/CompanyService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main-service/src/main/java/ru/mf/client/service/impl/ClientViewServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/main-service/src/main/java/ru/mf/company/service/impl/CompanyViewService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main-service/src/main/java/ru/mf/client/specification/ClientJpaSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/main-service/src/main/java/ru/mf/company/specification/CompanyJpaSpecification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mapper/src/main/java/ru/mf/client/ClientMapper.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/web-view/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/web-view/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-view/src/main/java/ru/mf/view/ClientForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-view/src/main/java/ru/mf/view/CompanyForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-view/src/main/java/ru/mf/view/ClientView.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-view/src/main/java/ru/mf/view/CompanyView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-view/src/main/java/ru/mf/view/CompanyForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-view/src/main/java/ru/mf/view/CompanyForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-view/src/main/java/ru/mf/view/CompanyView.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-view/src/main/java/ru/mf/view/CompanyView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -333,7 +344,9 @@
       <workItem from="1723054113947" duration="617000" />
       <workItem from="1723285144007" duration="6436000" />
       <workItem from="1723291640932" duration="16254000" />
-      <workItem from="1723494836818" duration="3200000" />
+      <workItem from="1723494836818" duration="3526000" />
+      <workItem from="1723575532528" duration="7808000" />
+      <workItem from="1723583369006" duration="722000" />
     </task>
     <task id="LOCAL-00001" summary="update structure">
       <option name="closed" value="true" />
@@ -380,6 +393,53 @@
           <url>file://$PROJECT_DIR$/src/main/java/ru/mf/c3po/C3poApplication.java</url>
           <line>4</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/web-view/src/main/java/ru/mf/view/CompanyView.java</url>
+          <line>124</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/web-view/src/main/java/ru/mf/view/CompanyView.java</url>
+          <line>127</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/web-view/src/main/java/ru/mf/view/CompanyView.java</url>
+          <line>138</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/web-view/src/main/java/ru/mf/view/CompanyForm.java</url>
+          <line>67</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/web-view/src/main/java/ru/mf/view/CompanyForm.java</url>
+          <line>69</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/web-view/src/main/java/ru/mf/view/CompanyForm.java</url>
+          <line>68</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/web-view/src/main/java/ru/mf/view/CompanyForm.java</url>
+          <line>55</line>
+          <properties>
+            <option name="lambda-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/web-view/src/main/java/ru/mf/view/CompanyView.java</url>
+          <line>143</line>
+          <properties class="ru.mf.view.CompanyView" method="editCompany">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

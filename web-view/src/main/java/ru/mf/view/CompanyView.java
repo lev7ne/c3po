@@ -10,27 +10,37 @@ import com.vaadin.flow.data.value.ValueChangeMode;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import org.springframework.beans.factory.annotation.Autowired;
-import ru.mf.client.ClientViewDto;
-import ru.mf.client.service.ClientViewService;
+import ru.mf.company.CompanyCreateDto;
+import ru.mf.company.CompanyMapper;
+import ru.mf.company.CompanyUpdateDto;
+import ru.mf.company.CompanyViewDto;
+import ru.mf.company.service.CompanyService;
 import ru.mf.user.service.UserService;
 
-import java.time.format.DateTimeFormatter;
 
-
-@PageTitle("C3po | Company")
+@PageTitle("C3po | Companies")
 @Route("/companies")
 public class CompanyView extends VerticalLayout {
-    private final ClientViewService clientService;
+    private final CompanyService<CompanyCreateDto, CompanyUpdateDto, CompanyViewDto> companyViewService;
     private final UserService userService;
+    private final CompanyMapper companyMapper;
 
-    Grid<ClientViewDto> grid = new Grid<>(ClientViewDto.class);
+    Grid<CompanyViewDto> grid = new Grid<>(CompanyViewDto.class);
     TextField filterText = new TextField();
     CompanyForm companyForm;
 
+    private boolean isCreate = false;
+
     @Autowired
-    public CompanyView(ClientViewService clientViewService, UserService userService) {
+    public CompanyView(
+            CompanyService<CompanyCreateDto, CompanyUpdateDto, CompanyViewDto> companyViewService,
+            UserService userService,
+            CompanyMapper companyMapper
+    ) {
+
         this.userService = userService;
-        this.clientService = clientViewService;
+        this.companyViewService = companyViewService;
+        this.companyMapper = companyMapper;
 
         addClassName("list-view");
         setSizeFull();
@@ -38,7 +48,7 @@ public class CompanyView extends VerticalLayout {
         configureGrid();
         configureCompanyForm();
 
-        grid.setItems(clientViewService.findAllClients());
+        grid.setItems(companyViewService.findAll());
 
         add(
                 getToolbar(),
@@ -50,13 +60,13 @@ public class CompanyView extends VerticalLayout {
     }
 
     private void closeEditor() {
-        companyForm.setClient(null);
+        companyForm.setCompany(null);
         companyForm.setVisible(false);
         removeClassName("editing");
     }
 
     private void updateList() {
-        grid.setItems(clientService.findAllClients(filterText.getValue()));
+        grid.setItems(companyViewService.findAll(filterText.getValue()));
     }
 
     private Component getContent() {
@@ -72,17 +82,13 @@ public class CompanyView extends VerticalLayout {
     private void configureGrid() {
         grid.addClassName("companies-grid");
         grid.setSizeFull();
-        grid.setColumns("id", "orgName", "inn", "tenant", "personalAccount", "msisdn", "appUser.lastName", "createdDate");
+        grid.setColumns("id", "orgName", "inn", "appUser.lastName", "createdDate");
 
-
-        grid.getColumnByKey("id").setHeader("ID");
-        grid.getColumnByKey("orgName").setHeader("Название организации");
-        grid.getColumnByKey("inn").setHeader("ИНН");
-        grid.getColumnByKey("tenant").setHeader("Тенант");
-        grid.getColumnByKey("personalAccount").setHeader("Лицевой счет");
-        grid.getColumnByKey("msisdn").setHeader("MSISDN");
-        grid.getColumnByKey("appUser.lastName").setHeader("Менеджер CCC");
-        grid.getColumnByKey("createdDate").setHeader("Дата создания");
+//        grid.getColumnByKey("id").setHeader("ID");
+//        grid.getColumnByKey("orgName").setHeader("Название организации");
+//        grid.getColumnByKey("inn").setHeader("ИНН");
+//        grid.getColumnByKey("appUser.lastName").setHeader("Менеджер CCC");
+//        grid.getColumnByKey("createdDate").setHeader("Дата создания");
 
         grid.getColumns().forEach(c -> c.setAutoWidth(true));
 
@@ -95,8 +101,8 @@ public class CompanyView extends VerticalLayout {
         filterText.setValueChangeMode(ValueChangeMode.LAZY);
         filterText.addValueChangeListener(e -> updateList());
 
-        Button addContactButton = new Button("Добавить организацию");
-        addContactButton.addClickListener(e -> addCompany());
+        Button addContactButton = new Button("Создать компанию");
+        addContactButton.addClickListener(e -> createCompany());
 
         HorizontalLayout toolbar = new HorizontalLayout(filterText, addContactButton);
         toolbar.addClassName("toolbar");
@@ -113,31 +119,43 @@ public class CompanyView extends VerticalLayout {
     }
 
     private void saveCompany(CompanyForm.SaveEvent event) {
-        clientService.saveClient(event.getClient());
+        var viewDto = event.getCompany();
+
+        if (isCreate) {
+            var createDto = companyMapper.toCompanyCreateDto(viewDto);
+            companyViewService.create(createDto);
+        } else {
+            var updateDto = companyMapper.toCompanyUpdateDto(viewDto);
+            companyViewService.update(updateDto);
+        }
+
         updateList();
         closeEditor();
     }
 
-    private void editCompany(ClientViewDto dto) {
+    private void createCompany() {
+        grid.asSingleSelect().clear();
+        isCreate = true;
+        companyForm.setCompany(new CompanyViewDto());
+        companyForm.setVisible(true);
+        addClassName("editing");
+    }
+
+    private void editCompany(CompanyViewDto dto) {
         if (dto == null) {
             closeEditor();
         } else {
-            companyForm.setClient(dto);
+            isCreate = false;
+            companyForm.setCompany(dto);
             companyForm.setVisible(true);
             addClassName("editing");
         }
     }
 
     private void deleteCompany(CompanyForm.DeleteEvent event) {
-        clientService.deleteClient(event.getClient());
+        companyViewService.delete(event.getCompany());
         updateList();
         closeEditor();
     }
 
-    private void addCompany() {
-        grid.asSingleSelect().clear();
-        companyForm.setClient(new ClientViewDto());
-        companyForm.setVisible(true);
-        addClassName("editing");
-    }
 }

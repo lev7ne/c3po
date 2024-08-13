@@ -1,11 +1,11 @@
-package ru.mf.client.specification;
+package ru.mf.company.specification;
 
 import jakarta.persistence.criteria.CriteriaBuilder;
 import jakarta.persistence.criteria.Expression;
 import jakarta.persistence.criteria.Root;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Component;
-import ru.mf.client.model.Client;
+import ru.mf.company.model.Company;
 
 import java.util.Arrays;
 import java.util.List;
@@ -13,13 +13,13 @@ import java.util.Objects;
 
 
 @Component
-public class ClientJpaSpecification {
-    public Specification<Client> searchSpec(String filterText) {
+public class CompanyJpaSpecification {
+    public Specification<Company> searchSpec(String filterText) {
         return searchOr(filterText, Arrays.asList("orgName", "inn", "tenant",
                 "personalAccount", "msisdn"));
     }
 
-    private static Specification<Client> searchOr(String filterText, List<String> fields) {
+    private static Specification<Company> searchOr(String filterText, List<String> fields) {
         return (root, query, cb) -> {
             if (filterText == null || filterText.trim().isEmpty()) {
                 return cb.conjunction();
@@ -35,7 +35,7 @@ public class ClientJpaSpecification {
         };
     }
 
-    private static Expression<String> getFieldAsString(Root<Client> root, CriteriaBuilder cb, String field) {
+    private static Expression<String> getFieldAsString(Root<Company> root, CriteriaBuilder cb, String field) {
         Expression<?> exp = root.get(field);
         if (exp.getJavaType() == String.class) {
             return root.get(field);

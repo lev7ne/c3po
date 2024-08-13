@@ -4,6 +4,7 @@ dependencies {
     implementation project(":dto")
 
     implementation "com.vaadin:vaadin-spring-boot-starter:${vaadinVersion}"
+    implementation "org.mapstruct:mapstruct:${mapstructVersion}"
 }
 
 dependencyManagement {

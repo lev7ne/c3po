@@ -3,9 +3,9 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.52">
     <root id="1">
       <DateStyle>dmy</DateStyle>
-      <IntrospectionStateNumber>1040</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1058</IntrospectionStateNumber>
       <ServerVersion>16.3</ServerVersion>
-      <StartupTime>1723054051</StartupTime>
+      <StartupTime>1723370933</StartupTime>
       <TimeZones>true ACDT
 true ACSST
 false ACST
@@ -800,7 +800,7 @@ false Zulu
 14643||10|C|G
 14643||-9223372036854775808|U|G
 14643||10|U|G</Grants>
-      <IntrospectionStateNumber>1040</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1058</IntrospectionStateNumber>
       <ObjectId>16398</ObjectId>
       <OwnerName>postgres</OwnerName>
     </database>
@@ -4268,8 +4268,8 @@ false Zulu
     <schema id="265" parent="2" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>1040</IntrospectionStateNumber>
-      <LastIntrospectionLocalTimestamp>2024-08-10.13:45:49</LastIntrospectionLocalTimestamp>
+      <IntrospectionStateNumber>1058</IntrospectionStateNumber>
+      <LastIntrospectionLocalTimestamp>2024-08-13.19:06:21</LastIntrospectionLocalTimestamp>
       <ObjectId>2200</ObjectId>
       <StateNumber>524</StateNumber>
       <OwnerName>pg_database_owner</OwnerName>
@@ -4659,29 +4659,29 @@ false Zulu
     </routine>
     <sequence id="302" parent="265" name="app_user_id_seq">
       <DasType>bigint|0s</DasType>
-      <ObjectId>16823</ObjectId>
+      <ObjectId>16849</ObjectId>
       <SequenceIdentity>1</SequenceIdentity>
       <StartValue>1</StartValue>
-      <StateNumber>1033</StateNumber>
+      <StateNumber>1052</StateNumber>
       <OwnerName>postgres</OwnerName>
     </sequence>
-    <sequence id="303" parent="265" name="client_seq">
+    <sequence id="303" parent="265" name="company_id_seq">
       <DasType>bigint|0s</DasType>
-      <ObjectId>16833</ObjectId>
+      <ObjectId>16862</ObjectId>
       <SequenceIdentity>1</SequenceIdentity>
       <StartValue>1</StartValue>
-      <StateNumber>1039</StateNumber>
+      <StateNumber>1055</StateNumber>
       <OwnerName>postgres</OwnerName>
     </sequence>
     <table id="304" parent="265" name="app_user">
-      <ObjectId>16824</ObjectId>
-      <StateNumber>1037</StateNumber>
+      <ObjectId>16850</ObjectId>
+      <StateNumber>1055</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="305" parent="265" name="client">
-      <ObjectId>16834</ObjectId>
-      <StateNumber>1037</StateNumber>
+    <table id="305" parent="265" name="company">
+      <ObjectId>16863</ObjectId>
+      <StateNumber>1055</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
@@ -5184,44 +5184,44 @@ false Zulu
       <IdentityKind>by-default</IdentityKind>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>1033</StateNumber>
-      <SequenceId>16823</SequenceId>
+      <StateNumber>1052</StateNumber>
+      <SequenceId>16849</SequenceId>
       <TypeId>20</TypeId>
     </column>
     <column id="430" parent="304" name="first_name">
       <DasType>varchar(250)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
-      <StateNumber>1033</StateNumber>
+      <StateNumber>1052</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="431" parent="304" name="last_name">
       <DasType>varchar(250)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
-      <StateNumber>1033</StateNumber>
+      <StateNumber>1052</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="432" parent="304" name="email">
       <DasType>varchar(254)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
-      <StateNumber>1033</StateNumber>
+      <StateNumber>1052</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <index id="433" parent="304" name="app_user_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16829</ObjectId>
+      <ObjectId>16855</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>1033</StateNumber>
+      <StateNumber>1052</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
     <index id="434" parent="304" name="uq_email">
       <ColNames>email</ColNames>
-      <ObjectId>16831</ObjectId>
-      <StateNumber>1033</StateNumber>
+      <ObjectId>16857</ObjectId>
+      <StateNumber>1052</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
       <CollationNames>default</CollationNames>
@@ -5230,112 +5230,75 @@ false Zulu
     </index>
     <key id="435" parent="304" name="app_user_pkey">
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16830</ObjectId>
+      <ObjectId>16856</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>1033</StateNumber>
-      <UnderlyingIndexId>16829</UnderlyingIndexId>
+      <StateNumber>1052</StateNumber>
+      <UnderlyingIndexId>16855</UnderlyingIndexId>
     </key>
     <key id="436" parent="304" name="uq_email">
-      <ObjectId>16832</ObjectId>
-      <StateNumber>1033</StateNumber>
-      <UnderlyingIndexId>16831</UnderlyingIndexId>
+      <ObjectId>16858</ObjectId>
+      <StateNumber>1052</StateNumber>
+      <UnderlyingIndexId>16857</UnderlyingIndexId>
     </key>
     <column id="437" parent="305" name="id">
       <DasType>bigint|0s</DasType>
       <IdentityKind>by-default</IdentityKind>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>1037</StateNumber>
-      <SequenceId>16833</SequenceId>
+      <StateNumber>1055</StateNumber>
+      <SequenceId>16862</SequenceId>
       <TypeId>20</TypeId>
     </column>
     <column id="438" parent="305" name="org_name">
       <DasType>varchar(250)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
-      <StateNumber>1037</StateNumber>
+      <StateNumber>1055</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="439" parent="305" name="inn">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
-      <StateNumber>1037</StateNumber>
+      <StateNumber>1055</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="440" parent="305" name="tenant">
-      <DasType>varchar(250)|0s</DasType>
+    <column id="440" parent="305" name="app_user_id">
+      <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
-      <StateNumber>1037</StateNumber>
-      <TypeId>1043</TypeId>
-    </column>
-    <column id="441" parent="305" name="personal_account">
-      <DasType>bigint|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>5</Position>
-      <StateNumber>1037</StateNumber>
+      <StateNumber>1055</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="442" parent="305" name="msisdn">
-      <DasType>bigint|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>6</Position>
-      <StateNumber>1037</StateNumber>
-      <TypeId>20</TypeId>
-    </column>
-    <column id="443" parent="305" name="app_user_id">
-      <DasType>bigint|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>7</Position>
-      <StateNumber>1037</StateNumber>
-      <TypeId>20</TypeId>
-    </column>
-    <column id="444" parent="305" name="created_date">
+    <column id="441" parent="305" name="created_date">
       <DasType>date|0s</DasType>
       <NotNull>1</NotNull>
-      <Position>8</Position>
-      <StateNumber>1037</StateNumber>
+      <Position>5</Position>
+      <StateNumber>1055</StateNumber>
       <TypeId>1082</TypeId>
     </column>
-    <foreign-key id="445" parent="305" name="fk_app_user_id">
+    <foreign-key id="442" parent="305" name="fk_app_user_id">
       <ColNames>app_user_id</ColNames>
-      <ObjectId>16843</ObjectId>
-      <StateNumber>1037</StateNumber>
+      <ObjectId>16868</ObjectId>
+      <StateNumber>1055</StateNumber>
       <RefKeyColPositions>1</RefKeyColPositions>
-      <RefTableId>16824</RefTableId>
+      <RefTableId>16850</RefTableId>
     </foreign-key>
-    <index id="446" parent="305" name="client_pkey">
+    <index id="443" parent="305" name="company_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16839</ObjectId>
+      <ObjectId>16866</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>1037</StateNumber>
+      <StateNumber>1055</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="447" parent="305" name="uq_service">
-      <ColNames>tenant
-msisdn</ColNames>
-      <ObjectId>16841</ObjectId>
-      <StateNumber>1037</StateNumber>
-      <Unique>1</Unique>
-      <AccessMethodId>403</AccessMethodId>
-      <CollationNames>default</CollationNames>
-      <CollationIds>100</CollationIds>
-      <CollationParentNames>pg_catalog</CollationParentNames>
-    </index>
-    <key id="448" parent="305" name="client_pkey">
+    <key id="444" parent="305" name="company_pkey">
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16840</ObjectId>
+      <ObjectId>16867</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>1037</StateNumber>
-      <UnderlyingIndexId>16839</UnderlyingIndexId>
-    </key>
-    <key id="449" parent="305" name="uq_service">
-      <ObjectId>16842</ObjectId>
-      <StateNumber>1037</StateNumber>
-      <UnderlyingIndexId>16841</UnderlyingIndexId>
+      <StateNumber>1055</StateNumber>
+      <UnderlyingIndexId>16866</UnderlyingIndexId>
     </key>
   </database-model>
 </dataSource>
