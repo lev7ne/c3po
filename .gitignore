@@ -1,5 +1,7 @@
 .gradle
 build/
+target/
+src/
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**/build/
 !**/src/test/**/build/
@@ -9,6 +11,9 @@ build/
 .idea/jarRepositories.xml
 .idea/compiler.xml
 .idea/libraries/
+.idea/dataSources.local.xml
+.idea/dataSources/
+
 *.iws
 *.iml
 *.ipr
