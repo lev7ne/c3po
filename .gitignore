@@ -1,14 +1,15 @@
 .gradle
 build/
 target/
-src/
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**/build/
 !**/src/test/**/build/
 
+.env
+
 ### IntelliJ IDEA ###
 .idea/
-.env
+web-view/src/main/frontend/generated/
 
 *.iws
 *.iml
@@ -19,7 +20,3 @@ out/
 
 ### Mac OS ###
 .DS_Store
-
-# The following files are generated/updated by vaadin-maven-plugin
-node_modules/
-web-view/src/main/frontend/generated
