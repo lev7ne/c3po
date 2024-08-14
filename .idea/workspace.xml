@@ -414,7 +414,7 @@
       <workItem from="1723494836818" duration="3526000" />
       <workItem from="1723575532528" duration="7808000" />
       <workItem from="1723583369006" duration="1157000" />
-      <workItem from="1723659451738" duration="10839000" />
+      <workItem from="1723659451738" duration="11174000" />
     </task>
     <task id="LOCAL-00001" summary="update structure">
       <option name="closed" value="true" />
@@ -452,7 +452,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="update structure" />
     <MESSAGE value="-min mvp version" />
-    <option name="LAST_COMMIT_MESSAGE" value="-min mvp version" />
+    <MESSAGE value="prep methods for saving and updating the company need to fix" />
+    <MESSAGE value="prep methods for saving and updating the company need to fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="prep methods for saving and updating the company need to fix" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
