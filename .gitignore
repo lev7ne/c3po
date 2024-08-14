@@ -13,6 +13,7 @@ src/
 .idea/libraries/
 .idea/dataSources.local.xml
 .idea/dataSources/
+.idea/workspace.xml
 
 *.iws
 *.iml
