@@ -14,51 +14,39 @@ import com.vaadin.flow.data.binder.BeanValidationBinder;
 import com.vaadin.flow.data.binder.Binder;
 import com.vaadin.flow.data.binder.ValidationException;
 import com.vaadin.flow.shared.Registration;
-import ru.mf.client.ClientViewDto;
+import ru.mf.company.CompanyViewDto;
 import ru.mf.user.UserDto;
 
 import java.util.List;
 
 
-public class ClientForm extends FormLayout {
-    Binder<ClientViewDto> binder = new BeanValidationBinder<>(ClientViewDto.class);
+public class CompanyForm extends FormLayout {
+    private Binder<CompanyViewDto> binder = new BeanValidationBinder<>(CompanyViewDto.class);
+    private TextField orgName = new TextField("Название");
+    private TextField inn = new TextField("ИНН");
+    private ComboBox<UserDto> appUsers = new ComboBox<>("Менеджер CCC");
 
-    TextField orgName = new TextField("Organisation name");
-    TextField inn = new TextField("Identification number");
-    TextField tenant = new TextField("Tenant");
-    TextField personalAccount = new TextField("Account number");
-    TextField msisdn = new TextField("Msisdn");
-    ComboBox<UserDto> appUsers = new ComboBox<>("CCC");
+    private final Button save = new Button("Сохранить");
+    private final Button delete = new Button("Удалить");
+    private final Button cancel = new Button("Отменить");
 
-    Button save = new Button("Save");
-    Button delete = new Button("Delete");
-    Button cancel = new Button("Cancel");
+    private CompanyViewDto dto;
 
-    private ClientViewDto dto;
+    public CompanyForm(List<UserDto> userDtos) {
+        addClassName("company-form");
 
-
-    public ClientForm(List<UserDto> userDtos) {
-        addClassName("client-form");
         binder.bindInstanceFields(this);
 
         appUsers.setItems(userDtos);
         appUsers.setItemLabelGenerator(UserDto::getLastName);
 
         binder.forField(appUsers)
-                .bind(ClientViewDto::getAppUser, ClientViewDto::setAppUser);
+                .bind(CompanyViewDto::getAppUser, CompanyViewDto::setAppUser);
 
-        add(
-                orgName,
-                inn,
-                tenant,
-                personalAccount,
-                msisdn,
-                appUsers,
-                createButtonLayout()
-        );
+        add(orgName, inn, appUsers, createButtonLayout());
     }
 
-    public void setClient(ClientViewDto dto) {
+    public void setCompany(CompanyViewDto dto) {
         this.dto = dto;
         binder.readBean(dto);
     }
@@ -90,40 +78,39 @@ public class ClientForm extends FormLayout {
         }
     }
 
-    public static abstract class ClientFormEvent extends ComponentEvent<ClientForm> {
-        private ClientViewDto dto;
+    public static class SaveEvent extends ComponentEvent<CompanyForm> {
+        private CompanyViewDto dto;
 
-        protected ClientFormEvent(ClientForm source, ClientViewDto dto) {
+        SaveEvent(CompanyForm source, CompanyViewDto dto) {
             super(source, false);
             this.dto = dto;
         }
 
-        public ClientViewDto getClient() {
+        public CompanyViewDto getCompany() {
             return dto;
         }
     }
 
-    public static class SaveEvent extends ClientFormEvent {
-        SaveEvent(ClientForm source, ClientViewDto dto) {
-            super(source, dto);
+    public static class DeleteEvent extends ComponentEvent<CompanyForm> {
+        private CompanyViewDto dto;
+
+        DeleteEvent(CompanyForm source, CompanyViewDto dto) {
+            super(source, false);
+            this.dto = dto;
+        }
+
+        public CompanyViewDto getCompany() {
+            return dto;
         }
     }
 
-    public static class DeleteEvent extends ClientFormEvent {
-        DeleteEvent(ClientForm source, ClientViewDto dto) {
-            super(source, dto);
+    public static class CloseEvent extends ComponentEvent<CompanyForm> {
+        CloseEvent(CompanyForm source) {
+            super(source, false);
         }
     }
 
-    public static class CloseEvent extends ClientFormEvent {
-        CloseEvent(ClientForm source) {
-            super(source, null);
-        }
-    }
-
-    public <T extends ComponentEvent<?>> Registration addListener(Class<T> eventType,
-                                                                  ComponentEventListener<T> listener) {
+    public <T extends ComponentEvent<?>> Registration addListener(Class<T> eventType, ComponentEventListener<T> listener) {
         return getEventBus().addListener(eventType, listener);
     }
-
 }

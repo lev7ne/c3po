@@ -1,8 +1,18 @@
+plugins {
+    id "com.vaadin" version "${vaadinVersion}"
+}
+
+vaadin {
+    frontendDirectory = file('src/main/frontend')
+}
+
 dependencies {
     implementation project(":main-service")
+    implementation project(":mapper")
     implementation project(":dto")
 
     implementation "com.vaadin:vaadin-spring-boot-starter:${vaadinVersion}"
+    implementation "org.mapstruct:mapstruct:${mapstructVersion}"
 }
 
 dependencyManagement {
