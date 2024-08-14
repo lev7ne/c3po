@@ -4,31 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eba9b435-e5ba-4645-9919-acbdf4d49f3d" name="Changes" comment="update structure">
-      <change afterPath="$PROJECT_DIR$/application/src/main/java/ru/mf/configuration/JacksonConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web-view/frontend/c3poapplication/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/ru/mf/client/model/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/ru/mf/client/model/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/ru/mf/client/repository/ClientMoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/ru/mf/client/repository/ClientRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/resources/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/resources/schema.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dto/src/main/java/ru/mf/client/ClientCreateDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dto/src/main/java/ru/mf/client/ClientDeleteDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dto/src/main/java/ru/mf/client/ClientDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/dto/src/main/java/ru/mf/client/ClientDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dto/src/main/java/ru/mf/user/UserCreateDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dto/src/main/java/ru/mf/user/UserDeleteDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dto/src/main/java/ru/mf/user/UserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/dto/src/main/java/ru/mf/user/UserDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main-service/src/main/java/ru/mf/client/service/ClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/main-service/src/main/java/ru/mf/client/service/ClientService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main-service/src/main/java/ru/mf/client/service/impl/ClientServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/main-service/src/main/java/ru/mf/client/service/impl/ClientServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main-service/src/main/java/ru/mf/client/specification/ClientJpaSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/main-service/src/main/java/ru/mf/client/specification/ClientJpaSpecification.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main-service/src/main/java/ru/mf/user/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/main-service/src/main/java/ru/mf/user/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main-service/src/main/java/ru/mf/user/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/main-service/src/main/java/ru/mf/user/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main-service/src/main/java/ru/mf/user/specification/UserJpaSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/main-service/src/main/java/ru/mf/user/specification/UserJpaSpecification.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mapper/src/main/java/ru/mf/client/ClientMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/mapper/src/main/java/ru/mf/client/ClientMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mapper/src/main/java/ru/mf/user/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/mapper/src/main/java/ru/mf/user/UserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-api/src/main/java/ru/mf/user/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-api/src/main/java/ru/mf/user/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-view/src/main/java/ru/mf/view/ClientForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-view/src/main/java/ru/mf/view/ClientForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-view/src/main/java/ru/mf/view/ClientView.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-view/src/main/java/ru/mf/view/ClientView.java" afterDir="false" />
-    </list>
+    <list default="true" id="eba9b435-e5ba-4645-9919-acbdf4d49f3d" name="Changes" comment="update structure" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -57,7 +33,23 @@
         </task>
         <projects_view>
           <tree_state>
-            <expand />
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="c3po" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="c3po" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="c3po" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
             <select />
           </tree_state>
         </projects_view>
