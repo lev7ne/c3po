@@ -1,3 +1,11 @@
+plugins {
+    id "com.vaadin" version "${vaadinVersion}"
+}
+
+vaadin {
+    frontendDirectory = file('src/main/frontend')
+}
+
 dependencies {
     implementation project(":main-service")
     implementation project(":mapper")

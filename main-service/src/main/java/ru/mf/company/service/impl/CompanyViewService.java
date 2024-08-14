@@ -64,7 +64,7 @@ public class CompanyViewService implements CompanyService<CompanyCreateDto, Comp
     public List<CompanyViewDto> findAll() {
         var clients = companyRepository.findAll();
 
-        return companyMapper.toViewDtos(clients);
+        return companyMapper.toCompanyViewDtos(clients);
     }
 
     @Transactional(readOnly = true)
@@ -75,7 +75,7 @@ public class CompanyViewService implements CompanyService<CompanyCreateDto, Comp
         } else {
             var spec = companyJpaSpecification.searchSpec(filterText);
             var users = companyRepository.findAll(spec);
-            return companyMapper.toViewDtos(users);
+            return companyMapper.toCompanyViewDtos(users);
         }
     }
 

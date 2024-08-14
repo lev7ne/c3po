@@ -21,7 +21,7 @@ public interface CompanyMapper {
 
     CompanyViewDto toCompanyViewDto(Company entity);
 
-    List<CompanyViewDto> toViewDtos(List<Company> entities);
+    List<CompanyViewDto> toCompanyViewDtos(List<Company> entities);
 
     CompanyCreateDto toCompanyCreateDto(CompanyViewDto dto);
 

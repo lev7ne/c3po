@@ -42,7 +42,7 @@ public class CompanyView extends VerticalLayout {
         this.companyViewService = companyViewService;
         this.companyMapper = companyMapper;
 
-        addClassName("list-view");
+        addClassName("company-view");
         setSizeFull();
 
         configureGrid();
@@ -84,11 +84,11 @@ public class CompanyView extends VerticalLayout {
         grid.setSizeFull();
         grid.setColumns("id", "orgName", "inn", "appUser.lastName", "createdDate");
 
-//        grid.getColumnByKey("id").setHeader("ID");
-//        grid.getColumnByKey("orgName").setHeader("Название организации");
-//        grid.getColumnByKey("inn").setHeader("ИНН");
-//        grid.getColumnByKey("appUser.lastName").setHeader("Менеджер CCC");
-//        grid.getColumnByKey("createdDate").setHeader("Дата создания");
+        grid.getColumnByKey("id").setHeader("ID");
+        grid.getColumnByKey("orgName").setHeader("Название организации");
+        grid.getColumnByKey("inn").setHeader("ИНН");
+        grid.getColumnByKey("appUser.lastName").setHeader("Менеджер CCC");
+        grid.getColumnByKey("createdDate").setHeader("Дата создания");
 
         grid.getColumns().forEach(c -> c.setAutoWidth(true));
 
@@ -120,7 +120,6 @@ public class CompanyView extends VerticalLayout {
 
     private void saveCompany(CompanyForm.SaveEvent event) {
         var viewDto = event.getCompany();
-
         if (isCreate) {
             var createDto = companyMapper.toCompanyCreateDto(viewDto);
             companyViewService.create(createDto);
@@ -128,7 +127,6 @@ public class CompanyView extends VerticalLayout {
             var updateDto = companyMapper.toCompanyUpdateDto(viewDto);
             companyViewService.update(updateDto);
         }
-
         updateList();
         closeEditor();
     }
@@ -153,7 +151,8 @@ public class CompanyView extends VerticalLayout {
     }
 
     private void deleteCompany(CompanyForm.DeleteEvent event) {
-        companyViewService.delete(event.getCompany());
+        var deleteDto = event.getCompany();
+        companyViewService.delete(deleteDto);
         updateList();
         closeEditor();
     }

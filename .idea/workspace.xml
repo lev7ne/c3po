@@ -5,24 +5,77 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eba9b435-e5ba-4645-9919-acbdf4d49f3d" name="Changes" comment="-min mvp version">
-      <change afterPath="$PROJECT_DIR$/dto/src/main/java/ru/mf/company/CompanyCreateDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dto/src/main/java/ru/mf/company/CompanyUpdateDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mapper/src/main/java/ru/mf/company/CompanyMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d216e5d9-4637-45a3-9571-428b9adb847c.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d216e5d9-4637-45a3-9571-428b9adb847c.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d216e5d9-4637-45a3-9571-428b9adb847c/storage_v2/_src_/database/c3po.L84tAA/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d216e5d9-4637-45a3-9571-428b9adb847c/storage_v2/_src_/database/c3po.L84tAA/schema/public.abK9xQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/src/main/java/ru/mf/configuration/VaadinConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web-view/src/main/frontend/themes/c3po/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web-view/src/main/frontend/themes/c3po/theme.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/ru/mf/client/model/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/ru/mf/company/model/Company.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/ru/mf/client/repository/ClientRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/ru/mf/company/repository/CompanyRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/resources/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/resources/schema.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dto/src/main/java/ru/mf/client/ClientCreateDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/dto/src/main/java/ru/mf/company/BaseCompanyDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dto/src/main/java/ru/mf/client/ClientDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/dto/src/main/java/ru/mf/company/CompanyDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dto/src/main/java/ru/mf/client/ClientUpdateDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dto/src/main/java/ru/mf/client/ClientViewDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/dto/src/main/java/ru/mf/company/CompanyViewDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main-service/src/main/java/ru/mf/client/service/ClientViewService.java" beforeDir="false" afterPath="$PROJECT_DIR$/main-service/src/main/java/ru/mf/company/service/CompanyService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main-service/src/main/java/ru/mf/client/service/impl/ClientViewServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/main-service/src/main/java/ru/mf/company/service/impl/CompanyViewService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main-service/src/main/java/ru/mf/client/specification/ClientJpaSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/main-service/src/main/java/ru/mf/company/specification/CompanyJpaSpecification.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mapper/src/main/java/ru/mf/client/ClientMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/application/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/src/main/java/ru/mf/C3poApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/main/java/ru/mf/C3poApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/ru/mf/company/model/Company.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/ru/mf/company/model/Company.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main-service/src/main/java/ru/mf/company/service/impl/CompanyViewService.java" beforeDir="false" afterPath="$PROJECT_DIR$/main-service/src/main/java/ru/mf/company/service/impl/CompanyViewService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mapper/src/main/java/ru/mf/company/CompanyMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/mapper/src/main/java/ru/mf/company/CompanyMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/generated/flow/generated-flow-imports.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/generated/flow/generated-flow-imports.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/generated/flow/generated-flow-webcomponent-imports.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/generated/jar-resources/Flow.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/generated/jar-resources/Flow.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/generated/jar-resources/Flow.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/generated/jar-resources/FlowBootstrap.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/generated/jar-resources/FlowBootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/generated/jar-resources/FlowClient.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/generated/jar-resources/FlowClient.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/generated/jar-resources/buttonFunctions.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/generated/jar-resources/comboBoxConnector.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/generated/jar-resources/contextMenuConnector.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/generated/jar-resources/contextMenuTargetConnector.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/generated/jar-resources/copilot/base-panel-Bo-7csvK.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/generated/jar-resources/copilot/copilot-C5kdwofL.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/generated/jar-resources/copilot/copilot-features-plugin-C5ocHpy1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/generated/jar-resources/copilot/copilot-feedback-plugin-B1vtqacG.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/generated/jar-resources/copilot/copilot-global-vars-later-Bg313HPk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/generated/jar-resources/copilot/copilot-info-plugin-BD4JTXcX.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/generated/jar-resources/copilot/copilot-init-step2-wwj70Eqk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/generated/jar-resources/copilot/copilot-log-plugin-2obnS2ov.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/generated/jar-resources/copilot/copilot-notification-COJP6ks5.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/generated/jar-resources/copilot/copilot-shortcuts-plugin-D7SmGfb0.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/generated/jar-resources/copilot/copilot.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/generated/jar-resources/copilot/icons-BFatMQTq.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/generated/jar-resources/copilot/overlay-monkeypatch-BJzx8nYb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/generated/jar-resources/copilot/react-utils-DFD62MFY.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/generated/jar-resources/copilot/state-DIGAkjaT.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/generated/jar-resources/datepickerConnector.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/generated/jar-resources/dndConnector.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/generated/jar-resources/flow-component-directive.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/generated/jar-resources/flow-component-renderer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/generated/jar-resources/gridConnector.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/generated/jar-resources/index.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/generated/jar-resources/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/generated/jar-resources/index.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/generated/jar-resources/lit-renderer.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/generated/jar-resources/menubarConnector.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/generated/jar-resources/messageListConnector.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/generated/jar-resources/selectConnector.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/generated/jar-resources/theme-util.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/generated/jar-resources/tooltip.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/generated/jar-resources/vaadin-big-decimal-field.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/generated/jar-resources/vaadin-dev-tools/License.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/generated/jar-resources/vaadin-dev-tools/connection.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/generated/jar-resources/vaadin-dev-tools/live-reload-connection.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/generated/jar-resources/vaadin-dev-tools/vaadin-dev-tools.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/generated/jar-resources/vaadin-dev-tools/vaadin-dev-tools.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/generated/jar-resources/vaadin-dev-tools/websocket-connection.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/generated/jar-resources/vaadin-grid-flow-selection-column.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/generated/jar-resources/vaadin-time-picker/helpers.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/generated/jar-resources/vaadin-time-picker/timepickerConnector.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/generated/jar-resources/virtualListConnector.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/generated/vaadin-featureflags.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/generated/vaadin.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-view/src/main/frontend/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/vaadin-dev-server-settings.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/web-view/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/web-view/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-view/frontend/c3poapplication/styles.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/web-view/src/main/java/ru/mf/view/CompanyForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-view/src/main/java/ru/mf/view/CompanyForm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web-view/src/main/java/ru/mf/view/CompanyView.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-view/src/main/java/ru/mf/view/CompanyView.java" afterDir="false" />
     </list>
@@ -58,6 +111,17 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="c3po" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="c3po" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="c3po" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
               </path>
             </expand>
             <select />
@@ -104,62 +168,65 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Gradle.Build c3po.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.c3po [build].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.c3po [dependencies].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.c3po:server [:server:C3poServer.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.c3po:web-api [dependencies].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.c3po:web-api [help].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.c3po:web-view [dependencies].executor&quot;: &quot;Run&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Spring Boot.C3poApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.C3poServer.executor&quot;: &quot;Debug&quot;,
-    &quot;Spring Boot.C3poWeb.executor&quot;: &quot;Run&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/528/Desktop/homework/java-explore-with-me&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.51724136&quot;,
-    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Gradle.Build c3po.executor": "Run",
+    "Gradle.c3po [build].executor": "Run",
+    "Gradle.c3po [dependencies].executor": "Run",
+    "Gradle.c3po:server [:server:C3poServer.main()].executor": "Run",
+    "Gradle.c3po:web-api [dependencies].executor": "Run",
+    "Gradle.c3po:web-api [help].executor": "Run",
+    "Gradle.c3po:web-view [dependencies].executor": "Run",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.C3poApplication.executor": "Run",
+    "Spring Boot.C3poServer.executor": "Debug",
+    "Spring Boot.C3poWeb.executor": "Run",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/528/Desktop/homework/java-explore-with-me",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.51724136",
+    "run.configurations.included.in.services": "true",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\IntelliJ IDEA 2024.1.4\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ],
-    &quot;com.intellij.ide.scratch.LRUPopupBuilder$1/&quot;: [
-      &quot;PostgreSQL&quot;
+    "com.intellij.ide.scratch.LRUPopupBuilder$1/": [
+      "PostgreSQL"
     ],
-    &quot;com.intellij.ide.scratch.LRUPopupBuilder$1/SQL Dialect&quot;: [
-      &quot;PostgreSQL&quot;
+    "com.intellij.ide.scratch.LRUPopupBuilder$1/SQL Dialect": [
+      "PostgreSQL"
     ]
   }
-}</component>
+}]]></component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\528\Desktop\homework\c3po\application" />
-      <recent name="C:\Users\528\Desktop\homework\c3po" />
-      <recent name="C:\Users\528\Desktop\homework\c3po\server" />
+      <recent name="C:\Users\528\Desktop\homework\c3po\web-view\src\main\frontend\themes\c3po" />
+      <recent name="C:\Users\528\Desktop\homework\c3po\web-view\src\main\resources\frontend" />
+      <recent name="C:\Users\528\Desktop\homework\c3po\application\src\main\frontend\styles" />
+      <recent name="C:\Users\528\Desktop\homework\c3po\application\src\main\java" />
+      <recent name="C:\Users\528\Desktop\homework\c3po\src\main\frontend" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="ru.mf.view" />
@@ -346,7 +413,8 @@
       <workItem from="1723291640932" duration="16254000" />
       <workItem from="1723494836818" duration="3526000" />
       <workItem from="1723575532528" duration="7808000" />
-      <workItem from="1723583369006" duration="722000" />
+      <workItem from="1723583369006" duration="1157000" />
+      <workItem from="1723659451738" duration="10839000" />
     </task>
     <task id="LOCAL-00001" summary="update structure">
       <option name="closed" value="true" />
@@ -395,51 +463,9 @@
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/web-view/src/main/java/ru/mf/view/CompanyView.java</url>
-          <line>124</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/web-view/src/main/java/ru/mf/view/CompanyView.java</url>
-          <line>127</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/web-view/src/main/java/ru/mf/view/CompanyView.java</url>
-          <line>138</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/web-view/src/main/java/ru/mf/view/CompanyForm.java</url>
-          <line>67</line>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/web-view/src/main/java/ru/mf/view/CompanyForm.java</url>
-          <line>69</line>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/web-view/src/main/java/ru/mf/view/CompanyForm.java</url>
-          <line>68</line>
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/web-view/src/main/java/ru/mf/view/CompanyForm.java</url>
-          <line>55</line>
-          <properties>
-            <option name="lambda-ordinal" value="-1" />
-          </properties>
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/web-view/src/main/java/ru/mf/view/CompanyView.java</url>
-          <line>143</line>
-          <properties class="ru.mf.view.CompanyView" method="editCompany">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="8" />
+          <line>97</line>
+          <option name="timeStamp" value="20" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -21,30 +21,33 @@ import java.util.List;
 
 
 public class CompanyForm extends FormLayout {
-    private Binder<CompanyViewDto> binder;
+    private Binder<CompanyViewDto> binder = new BeanValidationBinder<>(CompanyViewDto.class);
     private TextField orgName = new TextField("Название");
     private TextField inn = new TextField("ИНН");
     private ComboBox<UserDto> appUsers = new ComboBox<>("Менеджер CCC");
 
-    private Button save = new Button("Сохранить");
-    private Button delete = new Button("Удалить");
-    private Button cancel = new Button("Отменить");
+    private final Button save = new Button("Сохранить");
+    private final Button delete = new Button("Удалить");
+    private final Button cancel = new Button("Отменить");
+
+    private CompanyViewDto dto;
 
     public CompanyForm(List<UserDto> userDtos) {
         addClassName("company-form");
 
-        binder = new BeanValidationBinder<>(CompanyViewDto.class);
         binder.bindInstanceFields(this);
 
         appUsers.setItems(userDtos);
         appUsers.setItemLabelGenerator(UserDto::getLastName);
 
-        binder.forField(appUsers).bind(CompanyViewDto::getAppUser, CompanyViewDto::setAppUser);
+        binder.forField(appUsers)
+                .bind(CompanyViewDto::getAppUser, CompanyViewDto::setAppUser);
 
         add(orgName, inn, appUsers, createButtonLayout());
     }
 
     public void setCompany(CompanyViewDto dto) {
+        this.dto = dto;
         binder.readBean(dto);
     }
 
@@ -54,7 +57,7 @@ public class CompanyForm extends FormLayout {
         cancel.addThemeVariants(ButtonVariant.LUMO_TERTIARY);
 
         save.addClickListener(event -> validateAndSave());
-        delete.addClickListener(event -> fireEvent(new DeleteEvent(this, binder.getBean())));
+        delete.addClickListener(event -> fireEvent(new DeleteEvent(this, dto)));
         cancel.addClickListener(event -> fireEvent(new CloseEvent(this)));
 
         save.addClickShortcut(Key.ENTER);
@@ -65,9 +68,11 @@ public class CompanyForm extends FormLayout {
 
     private void validateAndSave() {
         try {
-            var bean = binder.getBean();
-            binder.writeBean(bean);
-            fireEvent(new SaveEvent(this, bean));
+            binder.writeBean(dto);
+            if (appUsers.getValue() != null) {
+                dto.setAppUser(appUsers.getValue());
+            }
+            fireEvent(new SaveEvent(this, dto));
         } catch (ValidationException e) {
             e.printStackTrace();
         }
@@ -87,7 +92,7 @@ public class CompanyForm extends FormLayout {
     }
 
     public static class DeleteEvent extends ComponentEvent<CompanyForm> {
-        private final CompanyViewDto dto;
+        private CompanyViewDto dto;
 
         DeleteEvent(CompanyForm source, CompanyViewDto dto) {
             super(source, false);
