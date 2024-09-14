@@ -4,11 +4,12 @@ dependencies {
 
     implementation "org.springframework.boot:spring-boot-starter"
     implementation "org.springframework.boot:spring-boot-starter-web:${springbootVersion}"
-    testImplementation "org.springframework.boot:spring-boot-starter-test"
 
     implementation "jakarta.validation:jakarta.validation-api:${jakartaVersion}"
 
     implementation "org.projectlombok:lombok:${lombokVersion}"
     annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
+
+    testImplementation "org.springframework.boot:spring-boot-starter-test"
 }
 

@@ -54,7 +54,7 @@ public class CompanyViewService implements CompanyService<CompanyCreateDto, Comp
     @Override
     public CompanyViewDto getById(Long id) {
         var client = companyRepository.findById(id).orElseThrow(() ->
-                new NotFoundException("Client with id=" + id + " was not found"));
+                new NotFoundException("Company with id=" + id + " was not found"));
 
         return companyMapper.toCompanyViewDto(client);
     }

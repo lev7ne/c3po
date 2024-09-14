@@ -9,4 +9,9 @@ dependencies {
     annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
 
     implementation "org.mapstruct:mapstruct:${mapstructVersion}"
+
+    testImplementation "org.junit.jupiter:junit-jupiter"
+    testRuntimeOnly "org.junit.platform:junit-platform-launcher"
+    testImplementation "org.mockito:mockito-junit-jupiter"
+    testImplementation "org.mockito:mockito-core"
 }
