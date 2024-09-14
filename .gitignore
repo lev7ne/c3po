@@ -9,7 +9,7 @@ target/
 
 ### IntelliJ IDEA ###
 .idea/
-web-view/src/main/frontend/generated/
+c3po-web-view/src/main/frontend/generated/
 
 *.iws
 *.iml

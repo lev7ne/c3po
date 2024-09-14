@@ -1,0 +1,18 @@
+dependencies {
+    implementation "org.springframework.boot:spring-boot-starter"
+    implementation "org.springframework.boot:spring-boot-starter-web:${springbootVersion}"
+    implementation "org.springframework.boot:spring-boot-starter-data-jpa:${springbootVersion}"
+}
+
+project(':c3po-application') {
+    dependencies {
+        implementation project(':c3po-core')
+        implementation project(':c3po-dto')
+        implementation project(':c3po-mapper')
+        implementation project(':c3po-web-view')
+        implementation project(':c3po-web-api')
+        implementation project(':c3po-main-service')
+    }
+}
+
+

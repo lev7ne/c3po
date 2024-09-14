@@ -1,6 +1,6 @@
 dependencies {
-    implementation project(":dto")
-    implementation project(":main-service")
+    implementation project(":c3po-dto")
+    implementation project(":c3po-main-service")
 
     implementation "org.springframework.boot:spring-boot-starter"
     implementation "org.springframework.boot:spring-boot-starter-web:${springbootVersion}"

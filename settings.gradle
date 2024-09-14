@@ -1,4 +1,4 @@
 rootProject.name = "c3po"
-include "application", "web-api", "web-view", "core", "dto", "mapper", "main-service"
+include "c3po-application", "c3po-web-api", "c3po-web-view", "c3po-core", "c3po-dto", "c3po-mapper", "c3po-main-service"
 
 

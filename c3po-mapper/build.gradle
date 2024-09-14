@@ -1,6 +1,6 @@
 dependencies {
-    implementation project(":dto")
-    implementation project(":core")
+    implementation project(":c3po-dto")
+    implementation project(":c3po-core")
 
     implementation "org.springframework.boot:spring-boot-starter-data-jpa:${springbootVersion}"
 
